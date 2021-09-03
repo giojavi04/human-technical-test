@@ -1,7 +1,7 @@
 from flask_restx import Api
 from flask import Blueprint
 
-from .main.controller.user_controller import api as user_ns
+from .main.controller.currency_controller import api as currency_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -9,7 +9,7 @@ api = Api(
     blueprint,
     title='HUMAN BRAND - TECHNICAL TEST',
     version='1.0',
-    description='A simple api to tecnical test web service',
+    description='A simple api to technical test web service',
 )
 
-api.add_namespace(user_ns, path='/user')
+api.add_namespace(currency_ns, path='/currency')

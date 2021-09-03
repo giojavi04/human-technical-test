@@ -1,4 +1,4 @@
-#### FLASK RESTX BOILER-PLATE WITH JWT
+#### HUMAN BRAND - TECHNICAL TEST
 
 ### Terminal commands
 Note: make sure you have `pip` and `virtualenv` installed.
@@ -25,24 +25,17 @@ Make sure to run the initial migration commands to update the database.
     Open the following url on your browser to view swagger documentation
     http://127.0.0.1:5000/
 
+### Convert a amount ###
 
-### Using Postman ####
+    Open the following url on your browser to view swagger documentation
+    http://127.0.0.1:5000/currency?amount=5&option=3, change the amount by
+    the value expected and the option between:
+    1 = Euros a dólares 
+    2 = Pesos chilenos a dólares
+    3 = Soles a dólares 
 
-    Authorization header is in the following format:
+### Get a amount ###
 
-    Key: Authorization
-    Value: "token_generated_during_login"
-
-    For testing authorization, url for getting all user requires an admin token while url for getting a single
-    user by public_id requires just a regular authentication.
-
-### Full description and guide ###
-https://medium.freecodecamp.org/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563
-
-
-### Contributing
-If you want to contribute to this flask restplus boilerplate, clone the repository and just start making pull requests.
-
-```
-https://github.com/cosmic-byte/flask-restplus-boilerplate.git
-```
+    Open the following url on your browser to view swagger documentation
+    http://127.0.0.1:5000/currency/amount_expected, change the amount by
+    the value spected. In this request send body to WEBHOOK STABLISH.

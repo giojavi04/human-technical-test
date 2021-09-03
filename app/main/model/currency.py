@@ -7,6 +7,7 @@ class Currency(db.Model):
     __tablename__ = "currency"
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    public_id = db.Column(db.String(100), unique=True)
     amount = db.Column(db.String(100), nullable=False)
     currency_from = db.Column(db.String(30), nullable=False)
     currency_to = db.Column(db.String(30), nullable=False)

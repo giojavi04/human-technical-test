@@ -1,11 +1,13 @@
 from flask_restx import Namespace, fields
 
 
-class UserDto:
-    api = Namespace('user', description='user related operations')
-    user = api.model('user', {
-        'email': fields.String(required=True, description='user email address'),
-        'username': fields.String(required=True, description='user username'),
-        'password': fields.String(required=True, description='user password'),
-        'public_id': fields.String(description='user Identifier')
+class CurrencyDto:
+    api = Namespace('currency', description='currency related operations')
+    currency = api.model('currency', {
+        'public_id': fields.String(required=True, description='currency public_id'),
+        'amount': fields.String(required=True, description='currency amount query'),
+        'currency_from': fields.String(required=True, description='currency from'),
+        'currency_to': fields.String(required=True, description='currency to'),
+        'days': fields.String(description='currency latest five days'),
+        'registered_on': fields.String(description='currency date of query'),
     })
